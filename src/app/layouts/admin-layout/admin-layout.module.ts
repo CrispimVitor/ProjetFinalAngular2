@@ -23,6 +23,7 @@ import { PhaseComponent } from 'app/phase/phase.component';
 import { RoleComponent } from 'app/role/role.component';
 import { TacheComponent } from 'app/tache/tache.component';
 import { TribunalComponent } from 'app/tribunal/tribunal.component';
+import { LoginComponent } from 'app/login/login.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { TribunalComponent } from 'app/tribunal/tribunal.component';
     PhaseComponent,
     RoleComponent,
     TacheComponent,
-    TribunalComponent
+    TribunalComponent,
+    LoginComponent
   ]
 })
 

@@ -1,6 +1,10 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { ROUTES } from '../../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { AppService } from 'app/app.service';
+import 'rxjs/add/operator/finally'
 
 @Component({
     // moduleId: module.id,
@@ -14,9 +18,15 @@ export class NavbarComponent implements OnInit{
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(location: Location,  private element: ElementRef) {
+    constructor(location: Location,  private element: ElementRef, private router: Router, private httpClient: HttpClient, private appService: AppService) {
       this.location = location;
           this.sidebarVisible = false;
+          this.appService.authenticate(undefined, undefined);
+    }
+    logout() {
+        this.httpClient.post('http://localhost:9090/logout', {}).finally(()=> {
+        this.appService.authenticated = false;
+        this.router.navigateByUrl('/login');}).subscribe();
     }
 
     ngOnInit(){

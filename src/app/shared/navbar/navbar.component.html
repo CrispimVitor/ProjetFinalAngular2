@@ -67,9 +67,14 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
-                        <p>Log out</p>
-                    </a>
+                        <a routerLinkActive="active" routerLink="/">
+                            <p>Login</p>
+                        </a>
+                </li>
+                <li>
+                        <a (click)="logout()">
+                            <p>Log out</p>
+                        </a>
                 </li>
                 <li class="separator hidden-lg hidden-md"></li>
             </ul>
