@@ -1,0 +1,83 @@
+<div class="main-content" >
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="header">
+                      <h4 class="title">Ajouter un tribunal</h4>
+                  </div>
+                  <div class="content">
+                      <form (ngSubmit)="createTribunal()">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <label>Addresse</label>
+                                      <input type="text" class="form-control" placeholder="Addresse" [(ngModel)]="tribunal.addresse" name="addresse">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Fax</label>
+                                    <input type="number" class="form-control" placeholder="Fax" [(ngModel)]="tribunal.fax" name="fax">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>Tel</label>
+                                  <input type="number" class="form-control" placeholder="Tel" [(ngModel)]="tribunal.tel" name="tel">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Region</label>
+                                <input type="text" class="form-control" placeholder="Region" [(ngModel)]="tribunal.region" name="region">
+                            </div>
+                        </div>
+                    </div>
+                          <button type="submit" class="btn btn-info btn-fill pull-right">Ajouter</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="header">
+                      <h4 class="title">Liste des tribunaux</h4>
+                  </div>
+                  <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                              <thead>
+                                  <tr>
+                                      <th>Addresse</th>
+                                      <th>Fax</th>
+                                      <th>Tel</th>
+                                      <th>Region</th>
+                                      <th>Action</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let t of tribunals">
+                                      <td>{{t.addresse}}</td>
+                                      <td>{{t.fax}}</td>
+                                      <td>{{t.tel}}</td>
+                                      <td>{{t.region}}</td>
+                                      <td><button class="btn btn-info btn-fill" (click)="eliminateTribunal(t)">Supprimer</button></td>
+                                  </tr>
+                              </tbody>
+                        </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
