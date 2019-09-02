@@ -7,24 +7,24 @@
                             <h4 class="title">Ajouter un utilisateur</h4>
                         </div>
                         <div class="content">
-                            <form (ngSubmit)="createUtilisateur()">
+                            <form (ngSubmit)="createUser()">
                                 <div class="row">
                                       <div class="col-md-6">
                                               <div class="form-group">
                                                   <label>E-mail</label>
-                                                  <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="utilisateur.email" name="email">
+                                                  <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="user.email" name="email">
                                               </div>
                                       </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Prénom utilisateur</label>
-                                            <input type="text" class="form-control" placeholder="Prénom utilisateur" [(ngModel)]="utilisateur.prenomUtilisateur" name="prenomUtilisateur">
+                                            <input type="text" class="form-control" placeholder="Prénom utilisateur" [(ngModel)]="user.prenomUtilisateur" name="prenomUtilisateur">
                                     </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Nom utilisateur</label>
-                                            <input type="text" class="form-control" placeholder="Nom utilisateur" [(ngModel)]="utilisateur.nomUtilisateur" name="nomUtilisateur">
+                                            <input type="text" class="form-control" placeholder="Nom utilisateur" [(ngModel)]="user.nomUtilisateur" name="nomUtilisateur">
                                         </div>
                                     </div>
                                 </div>
@@ -53,11 +53,11 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let u of utilisateurs">
+                                        <tr *ngFor="let u of users">
                                             <td>{{u.email}}</td>
                                             <td>{{u.nomUtilisateur}}</td>
                                             <td>{{u.prenomUtilisateur}}</td>
-                                            <td><button class="btn btn-info btn-fill" (click)="eliminateUtilisateur(u)">Delete</button></td>
+                                            <td><button class="btn btn-info btn-fill" (click)="eliminateUser(u)">Delete</button></td>
                                         </tr>
                                     </tbody>
                               </table>

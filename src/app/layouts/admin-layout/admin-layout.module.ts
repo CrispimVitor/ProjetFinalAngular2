@@ -16,7 +16,6 @@ import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
-import { UtilisateurComponent } from 'app/utilisateur/utilisateur.component';
 import { AffaireComponent } from 'app/affaire/affaire.component';
 import { DocumentComponent } from 'app/document/document.component';
 import { PhaseComponent } from 'app/phase/phase.component';
@@ -43,7 +42,7 @@ import { LoginComponent } from 'app/login/login.component';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-    UtilisateurComponent,
+    UserComponent,
     AffaireComponent,
     DocumentComponent,
     PhaseComponent,

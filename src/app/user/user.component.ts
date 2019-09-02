@@ -9,31 +9,31 @@ import { AppService } from 'app/app.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-utilisateurs: any[];
-  utilisateur: User = new User();
-  constructor(private utilisateurService: UserService, private appService: AppService) { }
+  users: any[];
+  user: User = new User();
+  constructor(private userService: UserService, private appService: AppService) { }
 
   authenticated() {
     return this.appService.authenticated;
   }
 
   ngOnInit() {
-    this.locadUtilisateur();
+    this.locadUser();
   }
-  locadUtilisateur() {
-    this.utilisateurService.getAllUtilisateur().subscribe(
-      data => {this.utilisateurs = data;},
+  locadUser() {
+    this.userService.getAllUtilisateur().subscribe(
+      data => {this.users = data;},
       error => {console.log(error);}
     )
   }
-  createUtilisateur() {
-    this.utilisateurService.saveUtilisateur(this.utilisateur).subscribe(
-      () => {this.locadUtilisateur(); this.utilisateur = new User(); }
+  createUser() {
+    this.userService.saveUtilisateur(this.user).subscribe(
+      () => {this.locadUser(); this.user = new User(); }
     )
   }
-  eliminateUtilisateur(utilisateur) {
-    this.utilisateurService.deleteUtilisateur(utilisateur.idUtilisateur).subscribe(
-      () => {this.locadUtilisateur();},
+  eliminateUser(user) {
+    this.userService.deleteUtilisateur(user.idUtilisateur).subscribe(
+      () => {this.locadUser();},
       error => {console.log(error);}
     )
   }

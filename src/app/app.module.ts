@@ -18,9 +18,8 @@ import { PhaseService } from './services/phase.service';
 import { RoleService } from './services/role.service';
 import { TacheService } from './services/tache.service';
 import { TribunalService } from './services/tribunal.service';
-import { UtilisateurService } from './services/utilisateur.service';
 import { AppService } from './app.service';
-import { LoginComponent } from './login/login.component';
+import { UserService } from './services/user.service';
 
 @Injectable()
 export class XhrInterceptor implements HttpInterceptor {
@@ -53,8 +52,8 @@ export class XhrInterceptor implements HttpInterceptor {
     PhaseService, 
     RoleService, 
     TacheService, 
-    TribunalService, 
-    UtilisateurService,
+    TribunalService,
+    UserService,
     AppService,
     {provide: HTTP_INTERCEPTORS, useClass:XhrInterceptor, multi: true}
   ],

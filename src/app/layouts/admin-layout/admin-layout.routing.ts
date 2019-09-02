@@ -8,17 +8,16 @@ import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
-import { UtilisateurComponent } from 'app/utilisateur/utilisateur.component';
 import { AffaireComponent } from 'app/affaire/affaire.component';
 import { DocumentComponent } from 'app/document/document.component';
 import { PhaseComponent } from 'app/phase/phase.component';
 import { RoleComponent } from 'app/role/role.component';
 import { TacheComponent } from 'app/tache/tache.component';
 import { TribunalComponent } from 'app/tribunal/tribunal.component';
+import { LoginComponent } from 'app/login/login.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: HomeComponent },
-    { path: 'utilisateur',    component: UtilisateurComponent },
     { path: 'affaire',        component: AffaireComponent },
     { path: 'document',       component: DocumentComponent },
     { path: 'phase',          component: PhaseComponent },
@@ -32,4 +31,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'login',          component: LoginComponent },
 ];
