@@ -13,6 +13,8 @@ export class AppService {
     } : {});
     this.httpClient.get('http://localhost:9090/ProjetFinalMVC/login/user', {headers: headers}).subscribe(
       response => {
+        var result = response.toString;
+        console.log(result);
         if(response['username']) {
           this.authenticated = true;
         } else {
