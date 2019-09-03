@@ -15,6 +15,7 @@ import { RoleComponent } from 'app/role/role.component';
 import { TacheComponent } from 'app/tache/tache.component';
 import { TribunalComponent } from 'app/tribunal/tribunal.component';
 import { LoginComponent } from 'app/login/login.component';
+import { EditUserComponent } from 'app/edit-user/edit-user.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: HomeComponent },
@@ -32,4 +33,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'login',          component: LoginComponent },
+    { path: 'update/:id',     component: EditUserComponent }
 ];

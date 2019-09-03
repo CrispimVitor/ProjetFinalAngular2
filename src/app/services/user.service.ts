@@ -22,4 +22,8 @@ export class UserService {
   public deleteUtilisateur(id:number) : Observable <any> {
     return this.httpClient.delete('http://localhost:9090/ProjetFinalMVC/users/'+id);
   }
+  public updateUser(user: any): Observable<any> {
+    var userParse = JSON.parse(user);
+    return this.httpClient.put('http://localhost:9090/ProjetFinalMVC/users/' + userParse.idUtilisateur, userParse);
+  }
 }

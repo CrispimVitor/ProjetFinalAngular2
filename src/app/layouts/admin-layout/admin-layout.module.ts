@@ -23,6 +23,7 @@ import { RoleComponent } from 'app/role/role.component';
 import { TacheComponent } from 'app/tache/tache.component';
 import { TribunalComponent } from 'app/tribunal/tribunal.component';
 import { LoginComponent } from 'app/login/login.component';
+import { EditUserComponent } from 'app/edit-user/edit-user.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { LoginComponent } from 'app/login/login.component';
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     LbdModule,
+    ReactiveFormsModule,
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
   ],
   declarations: [
@@ -49,7 +51,8 @@ import { LoginComponent } from 'app/login/login.component';
     RoleComponent,
     TacheComponent,
     TribunalComponent,
-    LoginComponent
+    LoginComponent,
+    EditUserComponent
   ]
 })
 

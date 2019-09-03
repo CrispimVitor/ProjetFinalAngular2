@@ -1,5 +1,5 @@
 <div class="main-content" >
-        <!--<div [hidden]="!authenticated()"> -->
+        <div [hidden]="!authenticated()"> 
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8">
@@ -58,7 +58,10 @@
                                             <td>{{u.email}}</td>
                                             <td>{{u.nomUtilisateur}}</td>
                                             <td>{{u.prenomUtilisateur}}</td>
-                                            <td><button class="btn btn-info btn-fill" (click)="eliminateUser(u)">Delete</button></td>
+                                            <td>
+                                                <button class="btn btn-info btn-fill" (click)="eliminateUser(u)">Delete</button>
+                                                <button class="btn btn-info btn-fill" (click)="editUser(u)">Edit</button>
+                                            </td>
                                         </tr>
                                     </tbody>
                               </table>
@@ -67,10 +70,10 @@
                 </div>
             </div>
         </div>
-        <!--</div>
+        </div>
         <div [hidden]="authenticated()">
 
                 <p> Login to see your user interface</p>
-            </div> -->
+            </div> 
       </div>
       

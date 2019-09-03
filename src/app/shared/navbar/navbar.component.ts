@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit{
           this.appService.authenticate(undefined, undefined);
     }
     logout() {
-        this.httpClient.post('http://localhost:9090/logout', {}).finally(()=> {
+        this.httpClient.post('http://localhost:9090/ProjetFinalMVC/logout', {}).finally(()=> {
         this.appService.authenticated = false;
         this.router.navigateByUrl('/login');}).subscribe();
     }

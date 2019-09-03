@@ -1,6 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, Injectable } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpInterceptor, HttpRequest, HttpHandler } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -20,6 +20,7 @@ import { TacheService } from './services/tache.service';
 import { TribunalService } from './services/tribunal.service';
 import { AppService } from './app.service';
 import { UserService } from './services/user.service';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @Injectable()
 export class XhrInterceptor implements HttpInterceptor {
@@ -45,6 +46,7 @@ export class XhrInterceptor implements HttpInterceptor {
   declarations: [
     AppComponent,
     AdminLayoutComponent
+    //EditUserComponent
   ],
   providers: [
     AffaireService, 

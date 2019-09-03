@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'app/models/user';
 import { UserService } from 'app/services/user.service';
 import { AppService } from 'app/app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -11,7 +12,7 @@ import { AppService } from 'app/app.service';
 export class UserComponent implements OnInit {
   users: any[];
   user: User = new User();
-  constructor(private userService: UserService, private appService: AppService) { }
+  constructor(private userService: UserService, private appService: AppService, private router: Router) { }
 
   authenticated() {
     return this.appService.authenticated;
@@ -36,6 +37,11 @@ export class UserComponent implements OnInit {
       () => {this.locadUser();},
       error => {console.log(error);}
     )
+  }
+  editUser(user) {
+    localStorage.removeItem("editUserId");
+    localStorage.setItem("editUserId", user.idUtilisateur.toString());
+    this.router.navigate(['update', user.idUtilisateur])
   }
 
 }
