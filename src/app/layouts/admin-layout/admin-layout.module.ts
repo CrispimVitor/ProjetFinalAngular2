@@ -24,6 +24,7 @@ import { TacheComponent } from 'app/tache/tache.component';
 import { TribunalComponent } from 'app/tribunal/tribunal.component';
 import { LoginComponent } from 'app/login/login.component';
 import { EditUserComponent } from 'app/edit-user/edit-user.component';
+import { FilterPipe } from 'app/user/filter.pipe';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { EditUserComponent } from 'app/edit-user/edit-user.component';
     TacheComponent,
     TribunalComponent,
     LoginComponent,
-    EditUserComponent
+    EditUserComponent,
+    FilterPipe
   ]
 })
 
